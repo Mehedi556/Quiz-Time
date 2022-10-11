@@ -16,15 +16,6 @@ const Nav = () => {
     </ul>
   </div>
 </div>
-        // <div className='flex justify-between'>
-        //    <div>
-        //    <h1>this is nav</h1>
-        //    </div>
-        //    <nav>
-        //     
-        //    
-        //    </nav>
-        // </div>
     );
 };
 
