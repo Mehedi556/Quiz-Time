@@ -5,7 +5,7 @@ import SingleCart from '../SingleCart/SingleCart';
 
 const Home = () => {
     const carts = useLoaderData();
-    // console.log(cart.data.length);
+    console.log(carts.data);
     return (
         <div className="Home-container">
 

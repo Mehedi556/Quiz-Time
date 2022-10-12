@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { startTransition } from 'react';
 
 const Blog = () => {
   return (
