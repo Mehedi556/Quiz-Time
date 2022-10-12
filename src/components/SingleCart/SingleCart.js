@@ -12,10 +12,10 @@ const SingleCart = ({cart}) => {
                 </figure>
 
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">{name}</h2>
+                    <h2 className="card-title text-3xl text-white">{name}</h2>
                     <p>Questions: {total}</p>
                     <div className="card-actions">
-                    <button className="btn btn-info"><Link to={`/${id}`}>Buy Now</Link></button>
+                    <button className="btn btn-info font-bold"><Link to={`/${id}`}>Start now</Link></button>
                     </div>
                 </div>
             </div>
