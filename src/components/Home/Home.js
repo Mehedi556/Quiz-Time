@@ -20,7 +20,6 @@ const Home = () => {
             {
                 carts.data.map(cart => <SingleCart key={cart.id} cart={cart}></SingleCart>)
             }
-            {/* <h2>Cart length: {carts.data.length}</h2> */}
         </div>
 
         </div>
