@@ -1,46 +1,25 @@
 import React, { PureComponent } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { curveCardinal } from 'd3-shape';
+import { CartesianGrid, Line, LineChart, Tooltip, ResponsiveContainer, XAxis ,YAxis } from 'recharts';
+
 
 const Statistics = () => {
 
-const fata = useLoaderData();
-console.log(fata.data);
-
-const data = [
-    {
-      name: 'Page A',
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: 'Page B',
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: 'Page C',
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: 'Page D',
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    }
-
-]
-
+const courses = useLoaderData();
 
     return (
-      <div className='bg-white'>
-         
+        <div>
+            <div className='bg-white w-full h-full'>
+         <LineChart width={350} height={400} data={courses.data}>
+         <Line type="monotone" dataKey="total" stroke="#8884d8" activeDot={{ r: 8 }} />
+         <XAxis dataKey="name" />
+         <YAxis />
+         <Tooltip></Tooltip>
+         <CartesianGrid strokeDasharray="3 3" />
+         </LineChart>
       </div>
+        </div>
+      
     );
 };
 
