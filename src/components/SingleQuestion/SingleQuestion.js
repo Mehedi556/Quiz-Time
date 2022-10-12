@@ -1,4 +1,7 @@
 import React from 'react';
+import './SingleQuestion.css';
+import { EyeIcon } from '@heroicons/react/24/solid';
+
 
 const SingleQuestion = ({quiz}) => {
     // console.log(quiz);
@@ -16,9 +19,18 @@ const SingleQuestion = ({quiz}) => {
     }
     
 
+    const handleShowResult = () => {
+        alert(correctAnswer);
+    }
+
     return (
         <div className='w-10/12 mx-auto bg-slate-500 my-10 text-white p-10 rounded-3xl'>
-            
+             <div className='relative eye'>
+
+                <button onClick={handleShowResult}><EyeIcon className="h-6 w-6 right text-slate-900 hover:text-slate-300"/>
+                </button>
+             
+             </div>
             <h1 className='text-center text-[25px] bg-slate-900 p-5 m-2 mb-10 rounded-2xl'>{data}</h1>
 
         <div className='grid grid-cols-1 md:grid-cols-2'>
